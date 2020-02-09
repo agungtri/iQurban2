@@ -43,9 +43,6 @@ namespace iQurban.Controllers
                                 objLoggedInUser.EMAILID = cValue;
                                 break;
                             case "PHONE":
-                                
-
-
                                 objLoggedInUser.PHONE = cValue;
                                 break;
                             case "DIRECTOR":
