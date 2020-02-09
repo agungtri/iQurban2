@@ -44,6 +44,7 @@ namespace iQurban.Controllers
                                 break;
                             case "PHONE":
                                 objLoggedInUser.PHONE = cValue;
+                                ///test 
                                 break;
                             case "DIRECTOR":
                                 objLoggedInUser.ACCESS_LEVEL = cValue;
