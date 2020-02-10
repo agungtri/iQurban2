@@ -56,21 +56,21 @@ namespace iQurban
         //In reality, User data comes from Database or other Data Source.
         public List<User> UserList = new List<User>
         {
-            new User { USERID = "jsmith@email.com", PASSWORD = "test",
-            EMAILID = "jsmith@email.com", FIRST_NAME = "John",
-            LAST_NAME = "Smith", PHONE = "356-735-2748",
+            new User { USERID = "agung@email.com", PASSWORD = "test",
+            EMAILID = "agung@email.com", FIRST_NAME = "Agung",
+            LAST_NAME = "Tri Wahyono", PHONE = "000-00000",
             ACCESS_LEVEL = Roles.DIRECTOR.ToString(), WRITE_ACCESS = "WRITE_ACCESS" },
-            new User { USERID = "srob@email.com", PASSWORD = "test",
-            FIRST_NAME = "Steve", LAST_NAME = "Rob",
-            EMAILID = "srob@email.com", PHONE = "567-479-8537",
+            new User { USERID = "bowo@email.com", PASSWORD = "test",
+            FIRST_NAME = "Bowo", LAST_NAME = "Satryo",
+            EMAILID = "bowo@email.com", PHONE = "000-00000",
             ACCESS_LEVEL = Roles.SUPERVISOR.ToString(), WRITE_ACCESS = "WRITE_ACCESS" },
-            new User { USERID = "dwill@email.com", PASSWORD = "test",
-            FIRST_NAME = "DJ", LAST_NAME = "Will",
-            EMAILID = "dwill@email.com", PHONE = "599-306-6010",
+            new User { USERID = "raihan@email.com", PASSWORD = "test",
+            FIRST_NAME = "Raihan", LAST_NAME = "Zakariya",
+            EMAILID = "raihan@email.com", PHONE = "000-00000",
             ACCESS_LEVEL = Roles.ANALYST.ToString(), WRITE_ACCESS = "WRITE_ACCESS" },
-            new User { USERID = "JBlack@email.com", PASSWORD = "test",
-            FIRST_NAME = "Joe", LAST_NAME = "Black",
-            EMAILID = "JBlack@email.com", PHONE = "764-460-8610",
+            new User { USERID = "rakha@email.com", PASSWORD = "test",
+            FIRST_NAME = "Rakha", LAST_NAME = "Nararya",
+            EMAILID = "rakha@email.com", PHONE = "000-00000",
             ACCESS_LEVEL = Roles.ANALYST.ToString(), WRITE_ACCESS = "" }
         };
 
