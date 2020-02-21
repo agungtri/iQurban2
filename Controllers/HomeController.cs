@@ -12,18 +12,21 @@ using iQurban.CustomAttributes;
 using iQurban.Services;
 using System.Data.SqlClient;
 using Dapper;
+using iQurban.Data;
 
 namespace iQurban.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly qurbanContext _dc;
 
         //private readonly Itest _itest;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, qurbanContext dc)
         {
             _logger = logger;
+            _dc = dc;
         }
         
         public IActionResult Index()
@@ -123,6 +126,9 @@ namespace iQurban.Controllers
             {
                 //Save token in session object
                 HttpContext.Session.SetString("JWToken", userToken);
+
+                var dtUser = _dc.Users.Where(r => r.PASSWORD == user.PASSWORD && r.USERID == user.USERID).Single();
+
             }
             return Redirect("~/Home/Index");
         }
