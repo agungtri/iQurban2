@@ -7,7 +7,7 @@ namespace iQurban.Models
 {
     public class People
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
 
         public string Id_Kartu_Keluarga { get; set; }
         public string NIK { get; set; }

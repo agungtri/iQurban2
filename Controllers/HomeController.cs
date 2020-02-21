@@ -9,6 +9,9 @@ using iQurban.Models;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using iQurban.CustomAttributes;
+using iQurban.Services;
+using System.Data.SqlClient;
+using Dapper;
 
 namespace iQurban.Controllers
 {
@@ -16,10 +19,13 @@ namespace iQurban.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        //private readonly Itest _itest;
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
+        
         public IActionResult Index()
         {
             User objLoggedInUser = new User();
@@ -27,6 +33,7 @@ namespace iQurban.Controllers
             {
                 var claimsIdentity = HttpContext.User.Identity as ClaimsIdentity;
                 var userClaims = claimsIdentity.Claims;
+                //checkConnection();
 
                 if (HttpContext.User.Identity.IsAuthenticated)
                 {
@@ -65,6 +72,18 @@ namespace iQurban.Controllers
 
             return View("Index", objLoggedInUser);
         }
+
+        //private string checkConnection()
+        //{
+        //    //var connectionString = @"data source=(localhost);Initial Catalog=MyData;Integrated Security=SSPI";
+        //    using (SqlConnection connection = new SqlConnection(@"data source=(localhost)\\SQLEXPRESS;Initial Catalog=MyData;Integrated Security=SSPI"))
+        //    {
+        //        connection.Open();
+        //        var eventName = connection.QueryFirst<string>("SELECT TOP 1 [Name] FROM [MyData].[dbo].[People]");
+                
+        //        return eventName;
+        //    }
+        //}
 
         public IActionResult Logoff()
         {
