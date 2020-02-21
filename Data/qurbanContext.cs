@@ -12,9 +12,9 @@ namespace iQurban.Data
         public qurbanContext(DbContextOptions<qurbanContext> options) : base(options) { }
 
         public DbSet<Hewan> Hewans { get; set; }
-        //public DbSet<People> Peoples { get; set; }
-        //public DbSet<Order> Orders { get; set; }
-        //public DbSet<User> Users { get; set; }
+        public DbSet<People> Peoples { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<User> Users { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
